@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+$texto:white;
+$fondo:#032656;
+$resaltado:rgba(255, 187, 0, 0.932);
+.navbar {
+    background-color: #031c3f;
+    font-size: 30px;
+    a:hover {
+    font-size: 35px;
+}
+    a img:hover{
+    height: 120px;
+}
+}
+body{
+    background-color: $fondo;
+}
+h1{
+    padding-left: 120px;
+    padding-top: 50px;
+    color: $fondo;
+}
+.jumbotron{
+    background-image: url(./MEDIA/YOU_portada.jpg);
+    background-position: cover;
+    background-size: 100%;
+    width: 100%;
+    height: 780px;
+        
+    .p-home{
+    padding-left: 0;
+    color: rgb(255, 255, 6);
+    font-size: 25px;
+    text-shadow: 0 0 50px black;
+    }
+}
+h2{
+    color: $texto;
+    font-size: 30px;
+    text-align: center;
+}
+.section{
+    height:800px;
+}
+.nleft{
+    background-image: url(./MEDIA/YOU_servicios.png);
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    width: 50%;
+    padding-top: 50px;
+}
+
+$mapa1: (
+    35px:black,
+    30px:blue,
+    25px:gray,
+    20px:white
+);
+@each $sizes, $colores in $mapa1{
+    .maps-#{$colores} {
+        background-color: $resaltado;
+        border: solid $fondo;
+        border-radius: 10%;
+        text-shadow: 0 1px $fondo;
+        text-decoration-line: $fondo;
+        font-size: $sizes;
+        color:$colores;
+    }
+}
+
+.btn-group{
+    padding-top: 450px;
+    width: 50%;
+}
+.btn-group:hover{
+    scale: 110%;
+}
+.form-group label{
+    color:  $texto;
+}
+.pie{
+    margin-top: 150px;
+    width: 100%;
+    background-color: #031c3f;
+    text-align: center;
+    height: auto;
+    font-size: 20px;
+    color: $resaltado;
+    display: inline-block;
+
+    img{
+        padding-top: 20px;
+    }
+}
+.card{
+    background-color: $fondo;
+    font-size: 30px;
+    color: $texto;
+}
+.card-text:hover{
+    translate: 10px;
+    color:$resaltado;
+}
+.nleft-nosotros {
+    height: auto;
+}
+
+.nleft-nosotros img:hover{
+    translate: 10px;
+}
+.nright-nosotros{
+    font-size: 30px;
+    color: white;
+}
+.nright-nosotros p:hover{
+    translate: 10px;
+    color:$resaltado;
+}
+@mixin nright-nosotros{
+    font-size: 30px;
+    color: $texto;
+}
+.contacto-nosotros{
+    padding-top: 100px;
+    width: 50%;
+}
+.portada-metodo{
+    height: 500px;
+    background-image: url(./MEDIA/METODO\ .PNG);
+    background-size: 100%;
+    background-position: center;
+}
+.metodo-imagen{
+    display: block;
+    height:50%;
+    width: 50%;
+    padding-left: 10%;
+}
+.nright-nosotros p:hover{
+    translate: 10px;
+    color:$resaltado;
+}
+.servicios-portada{
+    width: 70%;
+    height: 600px;
+}
+.div-servicios{
+    padding-top: 200px;
+    padding-left: 15%;
+    width: 70%;
+    font-size: 20px;
+
+    button{
+        width: 150px;
+        height: fit-content;
+        display: inline-block;
+        color: $fondo;
+        border-radius: 10%;
+        background-color: $resaltado;
+}
+}
+.div-servicios button:hover{
+    scale: 80%;
+    background-color: $fondo;
+    color:$resaltado; 
+    border-color:$resaltado;
+}
+.nright-contacto{
+    @include nright-nosotros;
+    height: 500px;
+    img{
+        width: 90%;
+        height: 80%;
+}
+}
+.nright-contacto:hover{
+    translate: 10px;
+    color:$resaltado;
+}
+.nright-contacto img:hover {
+    scale: 105%;
+}
+.agendar-parrafo{
+@include nright-nosotros;
+position: center;
+}
+.agendar{
+    height: 600px;
+}
+.agendar img{
+    width: 100%;
+    height:auto;
+}
+.agendar-facebook{
+    width: 300px;
+    height: 60px;
+    padding-left: 30%;
+}
+.agendar-facebook input:hover {
+    background-color:rgba(255, 187, 0, 0.932);
+    font-size: larger;
+    scale: 110%;
+}
+.facebook-icon{
+    width: 200px;
+    height: 200px;
+    padding-top: 150px;
+}
