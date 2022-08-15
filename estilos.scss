@@ -11,6 +11,7 @@ $resaltado:rgba(255, 187, 0, 0.932);
     font-size: 30px;
     a:hover {
     font-size: 35px;
+    width: 100%;
 }
     a img:hover{
     height: 120px;
@@ -20,7 +21,6 @@ body{
     background-color: $fondo;
 }
 h1{
-    padding-left: 120px;
     padding-top: 50px;
     color: $fondo;
 }
@@ -28,11 +28,13 @@ h1{
     background-image: url(./MEDIA/YOU_portada.jpg);
     background-position: cover;
     background-size: 100%;
+    background-repeat: no-repeat;
     width: 100%;
     height: 780px;
+    padding-left: 5% ;
+
         
     .p-home{
-    padding-left: 0;
     color: rgb(255, 255, 6);
     font-size: 25px;
     text-shadow: 0 0 50px black;
@@ -44,15 +46,16 @@ h2{
     text-align: center;
 }
 .section{
-    height:800px;
+    height:auto;
 }
 .nleft{
     background-image: url(./MEDIA/YOU_servicios.png);
     background-position: center;
     background-size: cover;
-    height: 500px;
+    height:500px;
     width: 50%;
     padding-top: 50px;
+    margin-left: 5%;
 }
 
 $mapa1: (
@@ -74,17 +77,24 @@ $mapa1: (
 }
 
 .btn-group{
-    padding-top: 450px;
-    width: 50%;
+    width: 40%;
+    padding-top: 10px;
+    height: auto;
+    padding-left: 2%;
 }
 .btn-group:hover{
     scale: 110%;
+    transition-duration: 2s;
+}
+.nright{
+    width: 40%;
+    padding-left: 3%;
 }
 .form-group label{
     color:  $texto;
 }
 .pie{
-    margin-top: 150px;
+    margin-top: 10px;
     width: 100%;
     background-color: #031c3f;
     text-align: center;
@@ -105,6 +115,7 @@ $mapa1: (
 .card-text:hover{
     translate: 10px;
     color:$resaltado;
+    transition-duration: 2s;
 }
 .nleft-nosotros {
     height: auto;
@@ -112,6 +123,7 @@ $mapa1: (
 
 .nleft-nosotros img:hover{
     translate: 10px;
+    transition-duration: 2s;
 }
 .nright-nosotros{
     font-size: 30px;
@@ -120,6 +132,7 @@ $mapa1: (
 .nright-nosotros p:hover{
     translate: 10px;
     color:$resaltado;
+    transition-duration: 2s;
 }
 @mixin nright-nosotros{
     font-size: 30px;
@@ -210,4 +223,13 @@ position: center;
     width: 200px;
     height: 200px;
     padding-top: 150px;
+}
+
+@media screen and (max-width: 900px){
+    .btn-group{
+        display:grid;
+    }
+    .jumbotron{
+        height: 500px;
+    }
 }
