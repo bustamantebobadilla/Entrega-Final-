@@ -8,14 +8,15 @@ $fondo:#032656;
 $resaltado:rgba(255, 187, 0, 0.932);
 .navbar {
     background-color: #031c3f;
-    font-size: 30px;
+    font-size: 20px;
     a:hover {
-    font-size: 35px;
+    font-size: 25px;
     width: 100%;
+    }
 }
-    a img:hover{
-    height: 120px;
-}
+.navbar-brand{
+    color:$resaltado;
+    font-size: 25px;
 }
 body{
     background-color: $fondo;
@@ -51,10 +52,11 @@ h2{
 .nleft{
     background-image: url(./MEDIA/YOU_servicios.png);
     background-position: center;
-    background-size: cover;
-    height:500px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height:450px;
     width: 50%;
-    padding-top: 50px;
+    padding-top: 10px;
     margin-left: 5%;
 }
 
@@ -147,6 +149,7 @@ $mapa1: (
     background-image: url(./MEDIA/METODO\ .PNG);
     background-size: 100%;
     background-position: center;
+    background-repeat: no-repeat;
 }
 .metodo-imagen{
     display: block;
@@ -182,6 +185,7 @@ $mapa1: (
     background-color: $fondo;
     color:$resaltado; 
     border-color:$resaltado;
+    transition-duration: 2s;
 }
 .nright-contacto{
     @include nright-nosotros;
@@ -226,10 +230,159 @@ position: center;
 }
 
 @media screen and (max-width: 900px){
+    .navbar{
+    font-size: 20px;
+        a:hover {
+        font-size: 25px;
+    }
+    }
     .btn-group{
-        display:grid;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
     .jumbotron{
         height: 500px;
+    }
+    .nleft{
+        background-image: url(./MEDIA/YOU_servicios.png);
+        background-position: center;
+        background-size: 100%;
+        height:auto;
+        width: 50%;
+        padding-top: 50px;
+        margin-left: 5%;
+    }
+    .metodo-parrafos{
+        p{
+            font-size: 20px;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .div-servicios{
+        button{
+            padding-top: 50px;
+        }
+    }
+    .servicios-portada{
+        height: 400px;
+    }
+    .facebook-icon{
+        width: 100px;
+        height: 100px;
+        padding-top: 0;
+        padding: 10%;
+    }
+}
+@media screen and (max-width: 600px){
+    .navbar{
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: max-content;
+    width: 100%;
+        a:hover {
+            font-size: 20px;
+        }
+    }
+    .btn-group{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    $mapa1: (
+    20px:black,
+    19px:blue,
+    18px:gray,
+    16px:white
+);
+@each $sizes, $colores in $mapa1{
+    .maps-#{$colores} {
+        background-color: $resaltado;
+        border: solid $fondo;
+        border-radius: 10%;
+        text-shadow: 0 1px $fondo;
+        text-decoration-line: $fondo;
+        font-size: $sizes;
+        color:$colores;
+    }
+}
+    .jumbotron{
+        height: 350px;
+    }
+    .nleft{
+        background-image: url(./MEDIA/YOU_servicios.png);
+        background-position: center;
+        background-size: 100%;
+        height:auto;
+        width: 50%;
+        padding-top: 30px;
+        margin-left: 5%;
+    }
+    .servicios-portada{
+        height: 250px;
+    }
+}
+@media screen and (max-width: 480px){
+    .navbar{
+        font-size: 15px;
+        padding-left: 0;
+        width: 100%;
+            a:hover {
+            font-size: 20px;
+    }
+    }
+    .btn-group{
+        display: inline;
+        position: absolute;
+        top: 800px;
+        left: 150px;
+        }
+    $mapa1: (
+    20px:black,
+    19px:blue,
+    18px:gray,
+    16px:white
+);
+@each $sizes, $colores in $mapa1{
+    .maps-#{$colores} {
+        background-color: $resaltado;
+        border: solid $fondo;
+        border-radius: 10%;
+        text-shadow: 0 1px $fondo;
+        text-decoration-line: $fondo;
+        font-size: $sizes;
+        color:$colores;
+    }
+}
+    .jumbotron{
+        height: 350px;
+        h1{
+            padding-top: 0;
+        }
+        p{
+            font-size: 15px;
+            padding-top: 0;
+        }
+    }
+    .nleft{
+        background-image: url(./MEDIA/YOU_servicios.png);
+        background-position: center;
+        background-size: 100%;
+        height:350px;
+        width: 90%;
+        padding-top: 5px;
+        margin-left: 5%;
+        display: block;
+        }
+    .card p{
+        font-size: 20px;
+    }
+    .nleft-nosotros{
+        font-size: 20px;
+    }
+    .nright-nosotros{
+        font-size: 20px;
     }
 }
