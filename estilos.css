@@ -18,7 +18,26 @@
   font-size: 25px;
 }
 
-body {
+.marca:hover {
+  color: rgba(255, 187, 0, 0.932);
+  font-size: 30px;
+}
+
+.lista {
+  color: white;
+}
+
+.lista:hover {
+  color: rgba(255, 187, 0, 0.932);
+  transition-duration: 1s;
+}
+
+.navbar-toggler {
+  color: rgba(255, 187, 0, 0.932);
+  background-color: rgba(255, 187, 0, 0.932);
+}
+
+.body {
   background-color: #032656;
 }
 
@@ -50,6 +69,7 @@ h2 {
 
 .section {
   height: auto;
+  background-color: #032656;
 }
 
 .nleft {
@@ -236,16 +256,23 @@ h2 {
 .nright-contacto:hover {
   translate: 10px;
   color: rgba(255, 187, 0, 0.932);
+  transition-duration: 2s;
 }
 
 .nright-contacto img:hover {
   scale: 105%;
+  transition-duration: 2s;
 }
 
 .agendar-parrafo {
   font-size: 30px;
   color: white;
   position: center;
+}
+
+.agendar-parrafo:hover {
+  color: rgba(255, 187, 0, 0.932);
+  transition-duration: 2s;
 }
 
 .agendar {
@@ -265,8 +292,9 @@ h2 {
 
 .agendar-facebook input:hover {
   background-color: rgba(255, 187, 0, 0.932);
-  font-size: larger;
-  scale: 110%;
+  font-size: smaller;
+  scale: 80%;
+  transition-duration: 2s;
 }
 
 .facebook-icon {
